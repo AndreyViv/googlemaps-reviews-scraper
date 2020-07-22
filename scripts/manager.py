@@ -3,7 +3,7 @@ import time
 import csv
 
 # CSV file columns names
-COLUMNS = ['user name', 'user link', 'company name', 'company address', 'reviewed stars']
+COLUMNS = ['user name', 'user link', 'place name', 'place address', 'reviewed stars']
 
 # File paths
 URLS_FILE_PATH = 'data/'

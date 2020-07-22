@@ -136,10 +136,10 @@ class Scraper:
                 reviews = soup_parsing(driver, REVIEW)
 
                 for review in reviews:
-                    company_name = review.find('div', class_=REVIEW_COMPANY_NAME).find('span').text
-                    company_address = review.find('div', class_=REVIEW_COMPANY_ADDRESS).find('span').text
+                    place_name = review.find('div', class_=REVIEW_COMPANY_NAME).find('span').text
+                    place_address = review.find('div', class_=REVIEW_COMPANY_ADDRESS).find('span').text
                     stars_count = int(review.find('span', class_=REVIEW_STARS)['aria-label'][1])
-                    self.data_manager.write_data([user_name, user_link, company_name, company_address, stars_count])
+                    self.data_manager.write_data([user_name, user_link, place_name, place_address, stars_count])
 
                 process_status = SUCCESS
 
